@@ -4,10 +4,10 @@
 using namespace std;
 void recursiveCountdown(int n) {
 	if (n == 0) {
-		return;
+		return;  //base case	
 	}
 	cout << n << endl;
-	recursiveCountdown(n - 1); 
+	recursiveCountdown(n - 1); //recursive case
 
 }
 long long factorial(int n) {
