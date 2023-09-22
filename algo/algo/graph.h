@@ -6,7 +6,9 @@
 #include<vector>
 #include<queue>
 using namespace std;
-
+//this is the same exampleas in the book you may need to modify this function
+//or the condition in the breadth-first function if you won't to search for something 
+// this is just for illustration
 bool isSeller(string name) 
 {
 	if (name.back() == 'm')
@@ -15,17 +17,18 @@ bool isSeller(string name)
 	}
 	return false;
 }
-bool breadthFirstSearch(string name, unordered_map<string, vector<string>>graph)
+template<class t>
+bool breadthFirstSearch(t name, unordered_map<t, vector<t>>graph)
 {
-	queue<string> searchQueue;
-	unordered_set<string> searched;
+	queue<t> searchQueue;
+	unordered_set<t> searched;
 	for (int i = 0; i < graph[name].size(); i++) 
 	{
 		searchQueue.push(graph[name][i]);
 	}
 	while (!searchQueue.empty())
 	{
-		string person = searchQueue.front();
+		t person = searchQueue.front();
 		searchQueue.pop();
 		if (searched.find(person) == searched.end()) 
 		{
