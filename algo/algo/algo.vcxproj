@@ -130,6 +130,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="graph.h" />
     <ClInclude Include="recursion examples.h" />
     <ClInclude Include="search.h" />
     <ClInclude Include="sort.h" />
